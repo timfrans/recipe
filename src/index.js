@@ -31,7 +31,6 @@ class Index extends Component {
 
     createList(){
         const listItems = this.state.recipesArray.map((item)=>{
-            //console.log(item);
             return <li>{item}</li>
         });
         this.setState({
