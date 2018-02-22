@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import {Index} from './presentation/index';
+import {ContainerRecipe} from './containerRecipe';
 
 class ContainerIndex extends Component {
     constructor(props) {
@@ -8,7 +9,8 @@ class ContainerIndex extends Component {
 
         this.state = {
             recipesArray: [],
-            name: ''
+            name: '',
+            indexIsSelected: true
         }
 
         this.handleChange = this.handleChange.bind(this);
@@ -43,12 +45,15 @@ class ContainerIndex extends Component {
         this.createRecipe(this.state.name);
     }
 
+
+
     render(){
         return <Index 
-            recipesArray={this.state.recipesArray} 
+            indexIsSelected={this.state.indexIsSelected} 
+            recipesArray={this.state.recipesArray}
             deleteRecipe={this.deleteRecipe} 
             handleChange={this.handleChange} 
-            handleClick={this.handleClick}/>
+            handleClick={this.handleClick}/>;
     }
 }
 

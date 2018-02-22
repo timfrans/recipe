@@ -1,5 +1,4 @@
-import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
+import React from 'react';
 import {ContainerRecipe} from '../containerRecipe';
 
 export function Index(props) {
@@ -7,13 +6,18 @@ export function Index(props) {
         return <li key={index}><ContainerRecipe name={item} id={index} deleteRecipe={props.deleteRecipe}/></li>
     });
 
-    return (
-        <div>
-            <input type="text" onChange={props.handleChange}/>
-            <button onClick={props.handleClick}>Create New</button>
-            <ul>
-                {recipes}
-            </ul>
-        </div>
-    );
+    if(props.indexIsSelected){
+        return (
+            <div>
+                <input type="text" onChange={props.handleChange}/>
+                <button onClick={props.handleClick}>Create New</button>
+                <ul>
+                    {recipes}
+                </ul>
+            </div>
+        );
+    }
+    else{
+        return <h1>leeg</h1>;
+    }
 }

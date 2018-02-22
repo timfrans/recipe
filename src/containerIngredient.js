@@ -7,7 +7,7 @@ export class ContainerIngredient extends Component {
 
         this.state = {
             name: this.props.name,
-            id: this. props.id
+            id: this.props.id
         }
 
         this.handleClick = this.handleClick.bind(this);
