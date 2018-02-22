@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import {Index} from './presentation/index';
 import {ContainerRecipe} from './containerRecipe';
+import store from './stores/store';
 
 class ContainerIndex extends Component {
     constructor(props) {
